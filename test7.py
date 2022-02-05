@@ -118,8 +118,10 @@ while True:
 
 
 
+minutes = int(input("minutes: "))
 begining = time.perf_counter()
-
+secs = minutes * 60
+ending = secs + begining
 
 my_file = open(str(begining) + ".txt", "w")
 
@@ -144,6 +146,8 @@ hentai_list = [
 
 i = 0
 while True:
+    if timer(ending):
+            break
     #px_list = scrap_proxy() 
      
     #for ip in px_list:
